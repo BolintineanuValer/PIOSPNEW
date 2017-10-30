@@ -1,0 +1,952 @@
+package org.piosplab2.generated;
+
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Collection;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+import org.openjdk.jmh.annotations.CompilerControl;
+import org.openjdk.jmh.runner.InfraControl;
+import org.openjdk.jmh.infra.ThreadParams;
+import org.openjdk.jmh.results.BenchmarkTaskResult;
+import org.openjdk.jmh.results.Result;
+import org.openjdk.jmh.results.ThroughputResult;
+import org.openjdk.jmh.results.AverageTimeResult;
+import org.openjdk.jmh.results.SampleTimeResult;
+import org.openjdk.jmh.results.SingleShotResult;
+import org.openjdk.jmh.util.SampleBuffer;
+import org.openjdk.jmh.annotations.Mode;
+import org.openjdk.jmh.annotations.Fork;
+import org.openjdk.jmh.annotations.Measurement;
+import org.openjdk.jmh.annotations.Threads;
+import org.openjdk.jmh.annotations.Warmup;
+import org.openjdk.jmh.annotations.BenchmarkMode;
+import org.openjdk.jmh.results.RawResults;
+import org.openjdk.jmh.results.ResultRole;
+import java.lang.reflect.Field;
+import org.openjdk.jmh.infra.BenchmarkParams;
+import org.openjdk.jmh.infra.IterationParams;
+import org.openjdk.jmh.infra.Blackhole;
+import org.openjdk.jmh.infra.Control;
+import org.openjdk.jmh.results.ScalarResult;
+import org.openjdk.jmh.results.AggregationPolicy;
+import org.openjdk.jmh.runner.FailureAssistException;
+
+import org.piosplab2.generated.TestContains_AfterState_jmhType;
+import org.piosplab2.generated.RepoState_jmhType;
+import org.piosplab2.generated.SizeState_jmhType;
+import org.piosplab2.generated.TestContains_jmhType;
+public final class TestContains_contains_after_jmhTest {
+
+    boolean p000, p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011, p012, p013, p014, p015;
+    boolean p016, p017, p018, p019, p020, p021, p022, p023, p024, p025, p026, p027, p028, p029, p030, p031;
+    boolean p032, p033, p034, p035, p036, p037, p038, p039, p040, p041, p042, p043, p044, p045, p046, p047;
+    boolean p048, p049, p050, p051, p052, p053, p054, p055, p056, p057, p058, p059, p060, p061, p062, p063;
+    boolean p064, p065, p066, p067, p068, p069, p070, p071, p072, p073, p074, p075, p076, p077, p078, p079;
+    boolean p080, p081, p082, p083, p084, p085, p086, p087, p088, p089, p090, p091, p092, p093, p094, p095;
+    boolean p096, p097, p098, p099, p100, p101, p102, p103, p104, p105, p106, p107, p108, p109, p110, p111;
+    boolean p112, p113, p114, p115, p116, p117, p118, p119, p120, p121, p122, p123, p124, p125, p126, p127;
+    boolean p128, p129, p130, p131, p132, p133, p134, p135, p136, p137, p138, p139, p140, p141, p142, p143;
+    boolean p144, p145, p146, p147, p148, p149, p150, p151, p152, p153, p154, p155, p156, p157, p158, p159;
+    boolean p160, p161, p162, p163, p164, p165, p166, p167, p168, p169, p170, p171, p172, p173, p174, p175;
+    boolean p176, p177, p178, p179, p180, p181, p182, p183, p184, p185, p186, p187, p188, p189, p190, p191;
+    boolean p192, p193, p194, p195, p196, p197, p198, p199, p200, p201, p202, p203, p204, p205, p206, p207;
+    boolean p208, p209, p210, p211, p212, p213, p214, p215, p216, p217, p218, p219, p220, p221, p222, p223;
+    boolean p224, p225, p226, p227, p228, p229, p230, p231, p232, p233, p234, p235, p236, p237, p238, p239;
+    boolean p240, p241, p242, p243, p244, p245, p246, p247, p248, p249, p250, p251, p252, p253, p254, p255;
+    int startRndMask;
+    BenchmarkParams benchmarkParams;
+    IterationParams iterationParams;
+    ThreadParams threadParams;
+    Blackhole blackhole;
+    Control notifyControl;
+
+    public BenchmarkTaskResult contains_after_Throughput(InfraControl control, ThreadParams threadParams) throws Throwable {
+        this.benchmarkParams = control.benchmarkParams;
+        this.iterationParams = control.iterationParams;
+        this.threadParams    = threadParams;
+        this.notifyControl   = control.notifyControl;
+        if (this.blackhole == null) {
+            this.blackhole = new Blackhole("Today's password is swordfish. I understand instantiating Blackholes directly is dangerous.");
+        }
+        if (threadParams.getSubgroupIndex() == 0) {
+            RawResults res = new RawResults();
+            SizeState_jmhType l_sizestate2_G = _jmh_tryInit_f_sizestate2_G(control);
+            RepoState_jmhType l_repostate1_G = _jmh_tryInit_f_repostate1_G(control, l_sizestate2_G);
+            TestContains_jmhType l_testcontains0_0 = _jmh_tryInit_f_testcontains0_0(control);
+            TestContains_AfterState_jmhType l_afterstate3_G = _jmh_tryInit_f_afterstate3_G(control, l_sizestate2_G, l_repostate1_G);
+
+            control.preSetup();
+
+
+            control.announceWarmupReady();
+            while (control.warmupShouldWait) {
+                if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (!l_afterstate3_G.readyInvocation) {
+                            l_afterstate3_G.generateOrder(l_sizestate2_G);
+                            l_afterstate3_G.readyInvocation = true;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                    }
+                } else {
+                    while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+                if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (l_afterstate3_G.readyInvocation) {
+                            l_afterstate3_G.removeOrder(l_repostate1_G);
+                            l_afterstate3_G.readyInvocation = false;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                    }
+                } else {
+                    while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                res.allOps++;
+            }
+
+            notifyControl.startMeasurement = true;
+            contains_after_thrpt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_repostate1_G, l_afterstate3_G, l_testcontains0_0, l_sizestate2_G);
+            notifyControl.stopMeasurement = true;
+            control.announceWarmdownReady();
+            try {
+                while (control.warmdownShouldWait) {
+                    if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                        try {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (!l_afterstate3_G.readyInvocation) {
+                                l_afterstate3_G.generateOrder(l_sizestate2_G);
+                                l_afterstate3_G.readyInvocation = true;
+                            }
+                        } catch (Throwable t) {
+                            control.isFailing = true;
+                            throw t;
+                        } finally {
+                            TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                        }
+                    } else {
+                        while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (Thread.interrupted()) throw new InterruptedException();
+                        }
+                    }
+                    blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+                    if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                        try {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (l_afterstate3_G.readyInvocation) {
+                                l_afterstate3_G.removeOrder(l_repostate1_G);
+                                l_afterstate3_G.readyInvocation = false;
+                            }
+                        } catch (Throwable t) {
+                            control.isFailing = true;
+                            throw t;
+                        } finally {
+                            TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                        }
+                    } else {
+                        while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (Thread.interrupted()) throw new InterruptedException();
+                        }
+                    }
+                    res.allOps++;
+                }
+                control.preTearDown();
+            } catch (InterruptedException ie) {
+                control.preTearDownForce();
+            }
+
+            if (control.isLastIteration()) {
+                if (RepoState_jmhType.tearTrialMutexUpdater.compareAndSet(l_repostate1_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (l_repostate1_G.readyTrial) {
+                            l_repostate1_G.tearDown();
+                            l_repostate1_G.readyTrial = false;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        RepoState_jmhType.tearTrialMutexUpdater.set(l_repostate1_G, 0);
+                    }
+                } else {
+                    long l_repostate1_G_backoff = 1;
+                    while (RepoState_jmhType.tearTrialMutexUpdater.get(l_repostate1_G) == 1) {
+                        TimeUnit.MILLISECONDS.sleep(l_repostate1_G_backoff);
+                        l_repostate1_G_backoff = Math.max(1024, l_repostate1_G_backoff * 2);
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                synchronized(this.getClass()) {
+                    f_repostate1_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_afterstate3_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_sizestate2_G = null;
+                }
+                f_testcontains0_0 = null;
+            }
+            res.allOps += res.measuredOps;
+            int batchSize = iterationParams.getBatchSize();
+            int opsPerInv = benchmarkParams.getOpsPerInvocation();
+            res.allOps *= opsPerInv;
+            res.allOps /= batchSize;
+            res.measuredOps *= opsPerInv;
+            res.measuredOps /= batchSize;
+            BenchmarkTaskResult results = new BenchmarkTaskResult(res.allOps, res.measuredOps);
+            results.add(new ThroughputResult(ResultRole.PRIMARY, "contains_after", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
+            return results;
+        } else
+            throw new IllegalStateException("Harness failed to distribute threads among groups properly");
+    }
+
+    public static void contains_after_thrpt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, RepoState_jmhType l_repostate1_G, TestContains_AfterState_jmhType l_afterstate3_G, TestContains_jmhType l_testcontains0_0, SizeState_jmhType l_sizestate2_G) throws Throwable {
+        long operations = 0;
+        long realTime = 0;
+        result.startTime = System.nanoTime();
+        do {
+            if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (!l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.generateOrder(l_sizestate2_G);
+                        l_afterstate3_G.readyInvocation = true;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+            long rt = System.nanoTime();
+            blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+            realTime += (System.nanoTime() - rt);
+            if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.removeOrder(l_repostate1_G);
+                        l_afterstate3_G.readyInvocation = false;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+            operations++;
+        } while(!control.isDone);
+        result.stopTime = System.nanoTime();
+        result.realTime = realTime;
+        result.measuredOps = operations;
+    }
+
+
+    public BenchmarkTaskResult contains_after_AverageTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+        this.benchmarkParams = control.benchmarkParams;
+        this.iterationParams = control.iterationParams;
+        this.threadParams    = threadParams;
+        this.notifyControl   = control.notifyControl;
+        if (this.blackhole == null) {
+            this.blackhole = new Blackhole("Today's password is swordfish. I understand instantiating Blackholes directly is dangerous.");
+        }
+        if (threadParams.getSubgroupIndex() == 0) {
+            RawResults res = new RawResults();
+            SizeState_jmhType l_sizestate2_G = _jmh_tryInit_f_sizestate2_G(control);
+            RepoState_jmhType l_repostate1_G = _jmh_tryInit_f_repostate1_G(control, l_sizestate2_G);
+            TestContains_jmhType l_testcontains0_0 = _jmh_tryInit_f_testcontains0_0(control);
+            TestContains_AfterState_jmhType l_afterstate3_G = _jmh_tryInit_f_afterstate3_G(control, l_sizestate2_G, l_repostate1_G);
+
+            control.preSetup();
+
+
+            control.announceWarmupReady();
+            while (control.warmupShouldWait) {
+                if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (!l_afterstate3_G.readyInvocation) {
+                            l_afterstate3_G.generateOrder(l_sizestate2_G);
+                            l_afterstate3_G.readyInvocation = true;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                    }
+                } else {
+                    while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+                if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (l_afterstate3_G.readyInvocation) {
+                            l_afterstate3_G.removeOrder(l_repostate1_G);
+                            l_afterstate3_G.readyInvocation = false;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                    }
+                } else {
+                    while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                res.allOps++;
+            }
+
+            notifyControl.startMeasurement = true;
+            contains_after_avgt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_repostate1_G, l_afterstate3_G, l_testcontains0_0, l_sizestate2_G);
+            notifyControl.stopMeasurement = true;
+            control.announceWarmdownReady();
+            try {
+                while (control.warmdownShouldWait) {
+                    if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                        try {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (!l_afterstate3_G.readyInvocation) {
+                                l_afterstate3_G.generateOrder(l_sizestate2_G);
+                                l_afterstate3_G.readyInvocation = true;
+                            }
+                        } catch (Throwable t) {
+                            control.isFailing = true;
+                            throw t;
+                        } finally {
+                            TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                        }
+                    } else {
+                        while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (Thread.interrupted()) throw new InterruptedException();
+                        }
+                    }
+                    blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+                    if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                        try {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (l_afterstate3_G.readyInvocation) {
+                                l_afterstate3_G.removeOrder(l_repostate1_G);
+                                l_afterstate3_G.readyInvocation = false;
+                            }
+                        } catch (Throwable t) {
+                            control.isFailing = true;
+                            throw t;
+                        } finally {
+                            TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                        }
+                    } else {
+                        while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (Thread.interrupted()) throw new InterruptedException();
+                        }
+                    }
+                    res.allOps++;
+                }
+                control.preTearDown();
+            } catch (InterruptedException ie) {
+                control.preTearDownForce();
+            }
+
+            if (control.isLastIteration()) {
+                if (RepoState_jmhType.tearTrialMutexUpdater.compareAndSet(l_repostate1_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (l_repostate1_G.readyTrial) {
+                            l_repostate1_G.tearDown();
+                            l_repostate1_G.readyTrial = false;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        RepoState_jmhType.tearTrialMutexUpdater.set(l_repostate1_G, 0);
+                    }
+                } else {
+                    long l_repostate1_G_backoff = 1;
+                    while (RepoState_jmhType.tearTrialMutexUpdater.get(l_repostate1_G) == 1) {
+                        TimeUnit.MILLISECONDS.sleep(l_repostate1_G_backoff);
+                        l_repostate1_G_backoff = Math.max(1024, l_repostate1_G_backoff * 2);
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                synchronized(this.getClass()) {
+                    f_repostate1_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_afterstate3_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_sizestate2_G = null;
+                }
+                f_testcontains0_0 = null;
+            }
+            res.allOps += res.measuredOps;
+            int batchSize = iterationParams.getBatchSize();
+            int opsPerInv = benchmarkParams.getOpsPerInvocation();
+            res.allOps *= opsPerInv;
+            res.allOps /= batchSize;
+            res.measuredOps *= opsPerInv;
+            res.measuredOps /= batchSize;
+            BenchmarkTaskResult results = new BenchmarkTaskResult(res.allOps, res.measuredOps);
+            results.add(new AverageTimeResult(ResultRole.PRIMARY, "contains_after", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
+            return results;
+        } else
+            throw new IllegalStateException("Harness failed to distribute threads among groups properly");
+    }
+
+    public static void contains_after_avgt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, RepoState_jmhType l_repostate1_G, TestContains_AfterState_jmhType l_afterstate3_G, TestContains_jmhType l_testcontains0_0, SizeState_jmhType l_sizestate2_G) throws Throwable {
+        long operations = 0;
+        long realTime = 0;
+        result.startTime = System.nanoTime();
+        do {
+            if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (!l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.generateOrder(l_sizestate2_G);
+                        l_afterstate3_G.readyInvocation = true;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+            long rt = System.nanoTime();
+            blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+            realTime += (System.nanoTime() - rt);
+            if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.removeOrder(l_repostate1_G);
+                        l_afterstate3_G.readyInvocation = false;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+            operations++;
+        } while(!control.isDone);
+        result.stopTime = System.nanoTime();
+        result.realTime = realTime;
+        result.measuredOps = operations;
+    }
+
+
+    public BenchmarkTaskResult contains_after_SampleTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+        this.benchmarkParams = control.benchmarkParams;
+        this.iterationParams = control.iterationParams;
+        this.threadParams    = threadParams;
+        this.notifyControl   = control.notifyControl;
+        if (this.blackhole == null) {
+            this.blackhole = new Blackhole("Today's password is swordfish. I understand instantiating Blackholes directly is dangerous.");
+        }
+        if (threadParams.getSubgroupIndex() == 0) {
+            RawResults res = new RawResults();
+            SizeState_jmhType l_sizestate2_G = _jmh_tryInit_f_sizestate2_G(control);
+            RepoState_jmhType l_repostate1_G = _jmh_tryInit_f_repostate1_G(control, l_sizestate2_G);
+            TestContains_jmhType l_testcontains0_0 = _jmh_tryInit_f_testcontains0_0(control);
+            TestContains_AfterState_jmhType l_afterstate3_G = _jmh_tryInit_f_afterstate3_G(control, l_sizestate2_G, l_repostate1_G);
+
+            control.preSetup();
+
+
+            control.announceWarmupReady();
+            while (control.warmupShouldWait) {
+                if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (!l_afterstate3_G.readyInvocation) {
+                            l_afterstate3_G.generateOrder(l_sizestate2_G);
+                            l_afterstate3_G.readyInvocation = true;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                    }
+                } else {
+                    while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+                if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (l_afterstate3_G.readyInvocation) {
+                            l_afterstate3_G.removeOrder(l_repostate1_G);
+                            l_afterstate3_G.readyInvocation = false;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                    }
+                } else {
+                    while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                res.allOps++;
+            }
+
+            notifyControl.startMeasurement = true;
+            int targetSamples = (int) (control.getDuration(TimeUnit.MILLISECONDS) * 20); // at max, 20 timestamps per millisecond
+            int batchSize = iterationParams.getBatchSize();
+            int opsPerInv = benchmarkParams.getOpsPerInvocation();
+            SampleBuffer buffer = new SampleBuffer();
+            contains_after_sample_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, buffer, targetSamples, opsPerInv, batchSize, l_repostate1_G, l_afterstate3_G, l_testcontains0_0, l_sizestate2_G);
+            notifyControl.stopMeasurement = true;
+            control.announceWarmdownReady();
+            try {
+                while (control.warmdownShouldWait) {
+                    if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                        try {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (!l_afterstate3_G.readyInvocation) {
+                                l_afterstate3_G.generateOrder(l_sizestate2_G);
+                                l_afterstate3_G.readyInvocation = true;
+                            }
+                        } catch (Throwable t) {
+                            control.isFailing = true;
+                            throw t;
+                        } finally {
+                            TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                        }
+                    } else {
+                        while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (Thread.interrupted()) throw new InterruptedException();
+                        }
+                    }
+                    blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+                    if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                        try {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (l_afterstate3_G.readyInvocation) {
+                                l_afterstate3_G.removeOrder(l_repostate1_G);
+                                l_afterstate3_G.readyInvocation = false;
+                            }
+                        } catch (Throwable t) {
+                            control.isFailing = true;
+                            throw t;
+                        } finally {
+                            TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                        }
+                    } else {
+                        while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                            if (control.isFailing) throw new FailureAssistException();
+                            if (Thread.interrupted()) throw new InterruptedException();
+                        }
+                    }
+                    res.allOps++;
+                }
+                control.preTearDown();
+            } catch (InterruptedException ie) {
+                control.preTearDownForce();
+            }
+
+            if (control.isLastIteration()) {
+                if (RepoState_jmhType.tearTrialMutexUpdater.compareAndSet(l_repostate1_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (l_repostate1_G.readyTrial) {
+                            l_repostate1_G.tearDown();
+                            l_repostate1_G.readyTrial = false;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        RepoState_jmhType.tearTrialMutexUpdater.set(l_repostate1_G, 0);
+                    }
+                } else {
+                    long l_repostate1_G_backoff = 1;
+                    while (RepoState_jmhType.tearTrialMutexUpdater.get(l_repostate1_G) == 1) {
+                        TimeUnit.MILLISECONDS.sleep(l_repostate1_G_backoff);
+                        l_repostate1_G_backoff = Math.max(1024, l_repostate1_G_backoff * 2);
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                synchronized(this.getClass()) {
+                    f_repostate1_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_afterstate3_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_sizestate2_G = null;
+                }
+                f_testcontains0_0 = null;
+            }
+            res.allOps += res.measuredOps * batchSize;
+            res.allOps *= opsPerInv;
+            res.allOps /= batchSize;
+            res.measuredOps *= opsPerInv;
+            BenchmarkTaskResult results = new BenchmarkTaskResult(res.allOps, res.measuredOps);
+            results.add(new SampleTimeResult(ResultRole.PRIMARY, "contains_after", buffer, benchmarkParams.getTimeUnit()));
+            this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
+            return results;
+        } else
+            throw new IllegalStateException("Harness failed to distribute threads among groups properly");
+    }
+
+    public static void contains_after_sample_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SampleBuffer buffer, int targetSamples, long opsPerInv, int batchSize, RepoState_jmhType l_repostate1_G, TestContains_AfterState_jmhType l_afterstate3_G, TestContains_jmhType l_testcontains0_0, SizeState_jmhType l_sizestate2_G) throws Throwable {
+        long realTime = 0;
+        long operations = 0;
+        int rnd = (int)System.nanoTime();
+        int rndMask = startRndMask;
+        long time = 0;
+        int currentStride = 0;
+        do {
+            if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (!l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.generateOrder(l_sizestate2_G);
+                        l_afterstate3_G.readyInvocation = true;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+            long rt = System.nanoTime();
+            rnd = (rnd * 1664525 + 1013904223);
+            boolean sample = (rnd & rndMask) == 0;
+            if (sample) {
+                time = System.nanoTime();
+            }
+            for (int b = 0; b < batchSize; b++) {
+                if (control.volatileSpoiler) return;
+                blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+            }
+            if (sample) {
+                buffer.add((System.nanoTime() - time) / opsPerInv);
+                if (currentStride++ > targetSamples) {
+                    buffer.half();
+                    currentStride = 0;
+                    rndMask = (rndMask << 1) + 1;
+                }
+            }
+            realTime += (System.nanoTime() - rt);
+            if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.removeOrder(l_repostate1_G);
+                        l_afterstate3_G.readyInvocation = false;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+            operations++;
+        } while(!control.isDone);
+        startRndMask = Math.max(startRndMask, rndMask);
+        result.realTime = realTime;
+        result.measuredOps = operations;
+    }
+
+
+    public BenchmarkTaskResult contains_after_SingleShotTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+        this.benchmarkParams = control.benchmarkParams;
+        this.iterationParams = control.iterationParams;
+        this.threadParams    = threadParams;
+        this.notifyControl   = control.notifyControl;
+        if (this.blackhole == null) {
+            this.blackhole = new Blackhole("Today's password is swordfish. I understand instantiating Blackholes directly is dangerous.");
+        }
+        if (threadParams.getSubgroupIndex() == 0) {
+            SizeState_jmhType l_sizestate2_G = _jmh_tryInit_f_sizestate2_G(control);
+            RepoState_jmhType l_repostate1_G = _jmh_tryInit_f_repostate1_G(control, l_sizestate2_G);
+            TestContains_jmhType l_testcontains0_0 = _jmh_tryInit_f_testcontains0_0(control);
+            TestContains_AfterState_jmhType l_afterstate3_G = _jmh_tryInit_f_afterstate3_G(control, l_sizestate2_G, l_repostate1_G);
+
+            control.preSetup();
+
+
+            notifyControl.startMeasurement = true;
+            RawResults res = new RawResults();
+            int batchSize = iterationParams.getBatchSize();
+            contains_after_ss_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, batchSize, l_repostate1_G, l_afterstate3_G, l_testcontains0_0, l_sizestate2_G);
+            control.preTearDown();
+
+            if (control.isLastIteration()) {
+                if (RepoState_jmhType.tearTrialMutexUpdater.compareAndSet(l_repostate1_G, 0, 1)) {
+                    try {
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (l_repostate1_G.readyTrial) {
+                            l_repostate1_G.tearDown();
+                            l_repostate1_G.readyTrial = false;
+                        }
+                    } catch (Throwable t) {
+                        control.isFailing = true;
+                        throw t;
+                    } finally {
+                        RepoState_jmhType.tearTrialMutexUpdater.set(l_repostate1_G, 0);
+                    }
+                } else {
+                    long l_repostate1_G_backoff = 1;
+                    while (RepoState_jmhType.tearTrialMutexUpdater.get(l_repostate1_G) == 1) {
+                        TimeUnit.MILLISECONDS.sleep(l_repostate1_G_backoff);
+                        l_repostate1_G_backoff = Math.max(1024, l_repostate1_G_backoff * 2);
+                        if (control.isFailing) throw new FailureAssistException();
+                        if (Thread.interrupted()) throw new InterruptedException();
+                    }
+                }
+                synchronized(this.getClass()) {
+                    f_repostate1_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_afterstate3_G = null;
+                }
+                synchronized(this.getClass()) {
+                    f_sizestate2_G = null;
+                }
+                f_testcontains0_0 = null;
+            }
+            int opsPerInv = control.benchmarkParams.getOpsPerInvocation();
+            long totalOps = opsPerInv;
+            BenchmarkTaskResult results = new BenchmarkTaskResult(totalOps, totalOps);
+            results.add(new SingleShotResult(ResultRole.PRIMARY, "contains_after", res.getTime(), benchmarkParams.getTimeUnit()));
+            this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
+            return results;
+        } else
+            throw new IllegalStateException("Harness failed to distribute threads among groups properly");
+    }
+
+    public static void contains_after_ss_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, int batchSize, RepoState_jmhType l_repostate1_G, TestContains_AfterState_jmhType l_afterstate3_G, TestContains_jmhType l_testcontains0_0, SizeState_jmhType l_sizestate2_G) throws Throwable {
+        long realTime = 0;
+        result.startTime = System.nanoTime();
+        for (int b = 0; b < batchSize; b++) {
+            if (control.volatileSpoiler) return;
+            if (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (!l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.generateOrder(l_sizestate2_G);
+                        l_afterstate3_G.readyInvocation = true;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.setupInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.setupInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+            long rt = System.nanoTime();
+            blackhole.consume(l_testcontains0_0.contains_after(l_repostate1_G, l_afterstate3_G));
+            realTime += (System.nanoTime() - rt);
+            if (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.compareAndSet(l_afterstate3_G, 0, 1)) {
+                try {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (l_afterstate3_G.readyInvocation) {
+                        l_afterstate3_G.removeOrder(l_repostate1_G);
+                        l_afterstate3_G.readyInvocation = false;
+                    }
+                } catch (Throwable t) {
+                    control.isFailing = true;
+                    throw t;
+                } finally {
+                    TestContains_AfterState_jmhType.tearInvocationMutexUpdater.set(l_afterstate3_G, 0);
+                }
+            } else {
+                while (TestContains_AfterState_jmhType.tearInvocationMutexUpdater.get(l_afterstate3_G) == 1) {
+                    if (control.isFailing) throw new FailureAssistException();
+                    if (Thread.interrupted()) throw new InterruptedException();
+                }
+            }
+        }
+        result.stopTime = System.nanoTime();
+        result.realTime = realTime;
+    }
+
+    
+    static volatile TestContains_AfterState_jmhType f_afterstate3_G;
+    
+    TestContains_AfterState_jmhType _jmh_tryInit_f_afterstate3_G(InfraControl control, SizeState_jmhType l_sizestate2_G, RepoState_jmhType l_repostate1_G) throws Throwable {
+        TestContains_AfterState_jmhType val = f_afterstate3_G;
+        if (val != null) {
+            return val;
+        }
+        synchronized(this.getClass()) {
+            try {
+            if (control.isFailing) throw new FailureAssistException();
+            val = f_afterstate3_G;
+            if (val != null) {
+                return val;
+            }
+            val = new TestContains_AfterState_jmhType();
+            val.readyTrial = true;
+            f_afterstate3_G = val;
+            } catch (Throwable t) {
+                control.isFailing = true;
+                throw t;
+            }
+        }
+        return val;
+    }
+    
+    static volatile RepoState_jmhType f_repostate1_G;
+    
+    RepoState_jmhType _jmh_tryInit_f_repostate1_G(InfraControl control, SizeState_jmhType l_sizestate2_G) throws Throwable {
+        RepoState_jmhType val = f_repostate1_G;
+        if (val != null) {
+            return val;
+        }
+        synchronized(this.getClass()) {
+            try {
+            if (control.isFailing) throw new FailureAssistException();
+            val = f_repostate1_G;
+            if (val != null) {
+                return val;
+            }
+            val = new RepoState_jmhType();
+            Field f;
+            f = org.piosplab2.RepoState.class.getDeclaredField("repositorySupplier");
+            f.setAccessible(true);
+            f.set(val, org.piosplab2.RepositorySupplier.valueOf(control.getParam("repositorySupplier")));
+            val.setUp(l_sizestate2_G);
+            val.readyTrial = true;
+            f_repostate1_G = val;
+            } catch (Throwable t) {
+                control.isFailing = true;
+                throw t;
+            }
+        }
+        return val;
+    }
+    
+    static volatile SizeState_jmhType f_sizestate2_G;
+    
+    SizeState_jmhType _jmh_tryInit_f_sizestate2_G(InfraControl control) throws Throwable {
+        SizeState_jmhType val = f_sizestate2_G;
+        if (val != null) {
+            return val;
+        }
+        synchronized(this.getClass()) {
+            try {
+            if (control.isFailing) throw new FailureAssistException();
+            val = f_sizestate2_G;
+            if (val != null) {
+                return val;
+            }
+            val = new SizeState_jmhType();
+            Field f;
+            f = org.piosplab2.SizeState.class.getDeclaredField("size");
+            f.setAccessible(true);
+            f.set(val, Integer.valueOf(control.getParam("size")));
+            val.readyTrial = true;
+            f_sizestate2_G = val;
+            } catch (Throwable t) {
+                control.isFailing = true;
+                throw t;
+            }
+        }
+        return val;
+    }
+    
+    TestContains_jmhType f_testcontains0_0;
+    
+    TestContains_jmhType _jmh_tryInit_f_testcontains0_0(InfraControl control) throws Throwable {
+        if (control.isFailing) throw new FailureAssistException();
+        TestContains_jmhType val = f_testcontains0_0;
+        if (val == null) {
+            val = new TestContains_jmhType();
+            f_testcontains0_0 = val;
+        }
+        return val;
+    }
+
+
+}
+

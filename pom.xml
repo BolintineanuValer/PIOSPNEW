@@ -90,6 +90,7 @@
 		<!-- add here any other modules -->
 		<module>piosplab1</module>
     <module>piosplab2</module>
+    <module>piosplab3</module>
   </modules>
 
 	<profiles>

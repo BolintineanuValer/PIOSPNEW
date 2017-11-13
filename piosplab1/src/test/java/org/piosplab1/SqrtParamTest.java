@@ -8,13 +8,14 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import junit.framework.Assert;
+import org.junit.Assert;;
 
 
 @RunWith(Parameterized.class)
 public class SqrtParamTest {
 		private double firstterm;
 		private double expectedresult;
+		private Sqrtoperation sq1 = new Sqrtoperation();
 		
 		public SqrtParamTest(double firstterm,double expectedresult) {
 			this.firstterm=firstterm;
@@ -29,7 +30,7 @@ public class SqrtParamTest {
 		@Test
 		public void testsqrt() {
 			try {
-			Assert.assertEquals(expectedresult,Sqrtoperation.sqrt(firstterm));
+			Assert.assertEquals(expectedresult,sq1.sqrt(firstterm),0.0001);
 			System.out.println("Tests passed --- validsqrt()");
 			}
 			catch(Exception sqrt) {

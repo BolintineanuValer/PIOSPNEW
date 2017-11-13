@@ -17,8 +17,8 @@ import org.openjdk.jmh.annotations.Warmup;
 
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 1, time = 1)
-@Measurement(iterations = 1, time = 1)
+@Warmup(iterations = 10, time = 1)
+@Measurement(iterations = 20, time = 1)
 @Fork(2)
 public class TestAdd {
 

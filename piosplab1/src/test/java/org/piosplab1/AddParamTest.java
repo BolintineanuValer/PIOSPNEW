@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 
 @RunWith(Parameterized.class)
@@ -16,7 +16,7 @@ public class AddParamTest {
 		private double firstterm;
 		private double secondterm;
 		private double expectedresult;
-		
+		private Addoperation a1 = new Addoperation();		
 		public AddParamTest(double firstterm,double secondterm,double expectedresult) {
 			this.firstterm=firstterm;
 			this.secondterm=secondterm;
@@ -30,7 +30,7 @@ public class AddParamTest {
 		
 		@Test
 		public void testadd() {
-			Assert.assertEquals(expectedresult,Addoperation.add(firstterm, secondterm));
+			Assert.assertEquals(expectedresult,a1.add(firstterm, secondterm),0.0001);
 			System.out.println("Tests passed --- add()");
 	}
 

@@ -79,17 +79,6 @@ script:
 Both Travis CI and Codacy provide status Badges that can be integrated with GitHub:
 ![Codacy Badge](/images/codacy_badge.png?raw=true "Codacy Badge")
 
-<<<<<<< Upstream, based on origin/master
-Bolintineanu Valer Badges: [![Build Status](https://travis-ci.org/BolintineanuValer/PIOSP.svg?branch=master)](https://travis-ci.org/BolintineanuValer/PIOSP) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/aae8c34c02084499bbfca323d668b0cb)](https://www.codacy.com/app/BolintineanuValer/PIOSP?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BolintineanuValer/PIOSP&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/aae8c34c02084499bbfca323d668b0cb)](https://www.codacy.com/app/BolintineanuValer/PIOSP?utm_source=github.com&utm_medium=referral&utm_content=BolintineanuValer/PIOSP&utm_campaign=Badge_Coverage)
-
-=======
-<<<<<<< HEAD
-=======
-Bolintineanu Valer Badges: [![Build Status](https://travis-ci.org/BolintineanuValer/PIOSP.svg?branch=master)](https://travis-ci.org/BolintineanuValer/PIOSP) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/aae8c34c02084499bbfca323d668b0cb)](https://www.codacy.com/app/BolintineanuValer/PIOSP?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BolintineanuValer/PIOSP&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/aae8c34c02084499bbfca323d668b0cb)](https://www.codacy.com/app/BolintineanuValer/PIOSP?utm_source=github.com&utm_medium=referral&utm_content=BolintineanuValer/PIOSP&utm_campaign=Badge_Coverage)
-
->>>>>>> refs/remotes/origin/master
->>>>>>> c05a31b commmit
-
 
 
 

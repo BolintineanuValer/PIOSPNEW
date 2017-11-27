@@ -158,7 +158,32 @@ public class BigDecimalsRepository {
 		}
 	}
 
-	public void options() throws FileNotFoundException, IOException, ClassNotFoundException {
+	public synchronized List<BigDecimal> produce() {
+		List<BigDecimal> listofdecimals = new ArrayList<BigDecimal>();
+		for (int i = 0; i < 10000000; i++) {
+			listofdecimals.add(new BigDecimal(i));
+		}
+		return listofdecimals;
+	}
+
+	public synchronized List<BigDecimal> producedeserialized(List<BigDecimal> listofdecimals)
+			throws FileNotFoundException, ClassNotFoundException, IOException {
+		BigDecimalsRepository bg = new BigDecimalsRepository();
+		listofdecimals = bg.deserialize(listofdecimals);
+		return listofdecimals;
+	}
+
+	public synchronized void consume(List<BigDecimal> listofdecimals) throws FileNotFoundException, IOException {
+		/*
+		 * BigDecimalsRepository bg = new BigDecimalsRepository();
+		 * bg.serialize(listofdecimals);
+		 */
+		for (int i = 0; i < listofdecimals.size(); i += 1000) {
+			System.out.println("BigDecimal removed from the list (consumed): " + listofdecimals.remove(i));
+		}
+	}
+
+	public void options() throws FileNotFoundException, IOException, ClassNotFoundException, InterruptedException {
 		int choice = 0;
 		BigDecimalsRepository bg = new BigDecimalsRepository();
 		do {
@@ -189,7 +214,7 @@ public class BigDecimalsRepository {
 				System.out.println(bg.avg(bg.listofdecimals));
 				break;
 			case 4:
-				System.out.println("The top 10% biggest nr in the List of BigDecimals is: ");
+				System.out.println("The top 10% biggest nr in the List of BigDecimals are: ");
 				System.out.println(bg.top10percentbiggestnr(bg.listofdecimals));
 				break;
 			case 5:
@@ -217,6 +242,47 @@ public class BigDecimalsRepository {
 				bg.deserializelambdas();
 				System.out.println("Lambda deserialized");
 				break;
+			case 11:
+				Thread t1 = new Thread(new Runnable() {
+					@Override
+					public void run() {
+						bg.listofdecimals.clear();// can comment and it will add not override
+						try {
+							bg.listofdecimals = bg.producedeserialized(bg.listofdecimals);
+						} catch (FileNotFoundException e) {
+							System.out.println("FileNotFoundException "+e);
+							e.printStackTrace();
+						} catch (ClassNotFoundException e) {
+							System.out.println("ClassNotFoundException "+e);
+							e.printStackTrace();
+						} catch (IOException e) {
+							System.out.println("IOException "+e);
+							e.printStackTrace();
+						}
+						System.out.println("10M BigDecimals deserialized and Added to the list");
+					}
+				});
+				Thread t2 = new Thread(new Runnable() {
+					@Override
+					public void run() {
+						try {
+							bg.consume(bg.listofdecimals);
+						} catch (FileNotFoundException e) {
+							System.out.println("FileNotFoundException "+e);
+							e.printStackTrace();
+						} catch (IOException e) {
+							System.out.println("IOException "+e);
+							e.printStackTrace();
+						}
+						System.out.println("10M BigDecimals consumed");
+					}
+				});
+				t1.start();
+				t1.join();
+				t2.start();
+				t2.join();
+				System.out.println("Threads finished");
+				break;
 			case 0:
 				System.out.println("Exited");
 				break;
@@ -237,6 +303,7 @@ public class BigDecimalsRepository {
 		System.out.println("8.Lambda avg serialize");
 		System.out.println("9.Lambda top10ps serialize");
 		System.out.println("10.Lambdas deserialize");
+		System.out.println("11.10M BigDecimals added to the list of BigDecimals(deserialized) and then consumed");
 		System.out.println("0.Exit");
 	}
 }

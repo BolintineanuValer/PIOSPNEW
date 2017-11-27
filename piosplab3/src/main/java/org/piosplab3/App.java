@@ -23,7 +23,7 @@ public class App
 {
 	//private static final File storageFile = new File("serial.data");
 	
-    public static void main( String[] args ) throws IOException, ClassNotFoundException
+    public static void main( String[] args ) throws IOException, ClassNotFoundException, InterruptedException
     {
     	BigDecimalsRepository bg = new BigDecimalsRepository();
     	bg.options();

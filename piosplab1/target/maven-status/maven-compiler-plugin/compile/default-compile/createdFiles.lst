@@ -6,6 +6,4 @@ org\piosplab1\Calculator.class
 org\piosplab1\Divoperation.class
 org\piosplab1\App.class
 org\piosplab1\Minoperation.class
-org\piosplab1\ICalculator.class
 org\piosplab1\Suboperation.class
-org\piosplab1\Operations.class

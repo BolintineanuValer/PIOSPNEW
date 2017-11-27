@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import org.junit.Assert;;
+import junit.framework.Assert;
 
 
 @RunWith(Parameterized.class)
@@ -16,7 +16,6 @@ public class MulParamTest {
 		private double firstterm;
 		private double secondterm;
 		private double expectedresult;
-		private Muloperation m1 = new Muloperation();
 		
 		public MulParamTest(double firstterm,double secondterm,double expectedresult) {
 			this.firstterm=firstterm;
@@ -31,7 +30,7 @@ public class MulParamTest {
 		
 		@Test
 		public void testmul() {
-			Assert.assertEquals(expectedresult,m1.mul(firstterm, secondterm),0.0001);
+			Assert.assertEquals(expectedresult,Muloperation.mul(firstterm, secondterm));
 			System.out.println("Tests passed --- mul()");
 	}
 

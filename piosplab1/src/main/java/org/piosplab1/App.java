@@ -8,7 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ICalculator c = new Calculator();
-        c.calculatoroption();
+        Calculator a = new Calculator();
+        a.calculatoroption();
     }
 }

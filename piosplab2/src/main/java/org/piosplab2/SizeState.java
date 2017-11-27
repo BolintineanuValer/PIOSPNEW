@@ -10,7 +10,7 @@ import org.openjdk.jmh.annotations.State;
 
 @State(Scope.Benchmark)
 public class SizeState {
-    @Param({"1000", "10000"})
+    @Param({"1", "1"})
     public int size;
 
     public Supplier<Order> existing = new Supplier<Order>() {

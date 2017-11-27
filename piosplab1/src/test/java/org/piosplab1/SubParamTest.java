@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import org.junit.Assert;;
+import junit.framework.Assert;
 
 
 @RunWith(Parameterized.class)
@@ -16,7 +16,6 @@ public class SubParamTest {
 		private double firstterm;
 		private double secondterm;
 		private double expectedresult;
-		private Suboperation s1 = new Suboperation();
 		
 		public SubParamTest(double firstterm,double secondterm,double expectedresult) {
 			this.firstterm=firstterm;
@@ -31,7 +30,7 @@ public class SubParamTest {
 		
 		@Test
 		public void testsub() {
-			Assert.assertEquals(expectedresult,s1.sub(firstterm, secondterm),0.0001);
+			Assert.assertEquals(expectedresult,Suboperation.sub(firstterm, secondterm));
 			System.out.println("Tests passed --- sub()");
 	}
 

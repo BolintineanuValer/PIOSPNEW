@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import org.junit.Assert;;
+import junit.framework.Assert;
 
 
 @RunWith(Parameterized.class)
@@ -16,7 +16,6 @@ public class DivParamTest {
 		private double firstterm;
 		private double secondterm;
 		private double expectedresult;
-		private Divoperation d1 = new Divoperation();
 		
 		public DivParamTest(double firstterm,double secondterm,double expectedresult) {
 			this.firstterm=firstterm;
@@ -32,7 +31,7 @@ public class DivParamTest {
 		@Test
 		public void testdiv() {
 			try {
-			Assert.assertEquals(expectedresult,d1.div(firstterm, secondterm),0.0001);
+			Assert.assertEquals(expectedresult,Divoperation.div(firstterm, secondterm));
 			System.out.println("Tests passed --- validdiv()");
 			}
 			catch(Exception ex) {

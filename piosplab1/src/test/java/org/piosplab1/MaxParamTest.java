@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import junit.framework.Assert;
+import org.junit.Assert;;
 
 
 @RunWith(Parameterized.class)
@@ -16,6 +16,7 @@ public class MaxParamTest {
 		private double firstterm;
 		private double secondterm;
 		private double expectedresult;
+		private Maxoperation ma1 = new Maxoperation();
 		
 		public MaxParamTest(double firstterm,double secondterm,double expectedresult) {
 			this.firstterm=firstterm;
@@ -30,7 +31,7 @@ public class MaxParamTest {
 		
 		@Test
 		public void testmax() {
-			Assert.assertEquals(expectedresult,Maxoperation.max(firstterm, secondterm));
+			Assert.assertEquals(expectedresult,ma1.max(firstterm, secondterm),0.0001);
 			System.out.println("Tests passed --- max()");
 	}
 

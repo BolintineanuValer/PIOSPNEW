@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import junit.framework.Assert;
+import org.junit.Assert;;
 
 
 @RunWith(Parameterized.class)
@@ -16,6 +16,7 @@ public class MinParamTest {
 		private double firstterm;
 		private double secondterm;
 		private double expectedresult;
+		private Minoperation mi1 = new Minoperation();
 		
 		public MinParamTest(double firstterm,double secondterm,double expectedresult) {
 			this.firstterm=firstterm;
@@ -30,7 +31,7 @@ public class MinParamTest {
 		
 		@Test
 		public void testmin() {
-			Assert.assertEquals(expectedresult,Minoperation.min(firstterm, secondterm));
+			Assert.assertEquals(expectedresult,mi1.min(firstterm, secondterm),0.0001);
 			System.out.println("Tests passed --- min()");
 	}
 

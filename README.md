@@ -79,7 +79,10 @@ script:
 Both Travis CI and Codacy provide status Badges that can be integrated with GitHub:
 ![Codacy Badge](/images/codacy_badge.png?raw=true "Codacy Badge")
 
-Bolintineanu Valer
+Bolintineanu Valer Project status
+
+Travis: [![Build Status](https://travis-ci.org/BolintineanuValer/PIOSPNEW.svg?branch=master)](https://travis-ci.org/BolintineanuValer/PIOSPNEW)
+Codacy: [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4eecde1dfcec4ca08d686595275c36f3)](https://www.codacy.com/app/BolintineanuValer/PIOSPNEW?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BolintineanuValer/PIOSPNEW&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/4eecde1dfcec4ca08d686595275c36f3)](https://www.codacy.com/app/BolintineanuValer/PIOSPNEW?utm_source=github.com&utm_medium=referral&utm_content=BolintineanuValer/PIOSPNEW&utm_campaign=Badge_Coverage)
 
 
 

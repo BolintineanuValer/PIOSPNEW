@@ -92,6 +92,7 @@
     <module>piosplab2</module>
     <module>piosplab3</module>
     <module>piosplab4</module>
+    <module>piosplab5_6_7</module>
   </modules>
 
 	<profiles>

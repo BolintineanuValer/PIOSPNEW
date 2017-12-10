@@ -80,7 +80,7 @@ public class Person {
 		return my_builder.toString();
 	}
 
-	public List<Person> readfromfile() {
+	public static List<Person> readfromfile() {
 		List<Person> inpersons = new ArrayList<>();
 		File file = new File("goodinput.txt");
 		try {
@@ -90,7 +90,10 @@ public class Person {
 				String[] values = data.split("%|~");
 				for (int j = 0; j < values.length; j += 5) {
 					long prcnp = Long.parseLong(values[j + 3]);
-					inpersons.add(new Person(values[j], values[j + 1], values[j + 2], prcnp, values[j + 4]));
+					int prcnplength = (int) (Math.log10(prcnp) + 1);
+					if (prcnplength == 13 && Character.isUpperCase(values[j].charAt(0)) && Character.isUpperCase(values[j + 1].charAt(0)) && Character.isUpperCase(values[j + 2].charAt(0)) ) {
+						inpersons.add(new Person(values[j], values[j + 1], values[j + 2], prcnp, values[j + 4]));
+					}
 				}
 			}
 			in.close();
@@ -100,25 +103,10 @@ public class Person {
 		return inpersons;
 	}
 
-	public void scrie(List<Person> pa) {
-		try {
-			PrintWriter out = new PrintWriter("goodoutput.txt");
-			for (int i = 0; i < pa.size(); i++) {
-				out.print(pa.get(i).getName1() + "~" + pa.get(i).getName2() + "~" + pa.get(i).getName3() + "~"
-						+ pa.get(i).getCnp() + "~" + pa.get(i).getEmail() + "%");
-			}
-			out.close();
-		} catch (Exception e) {
-			System.out.println("Eroare la scriere in fisier");
-		}
-	}
-
-	public void writetofile(Person pa) {
-		try {
-			PrintWriter out = new PrintWriter(new FileWriter("goodoutput.txt", true));
+	public static void writetofile(Person pa) {
+		try(PrintWriter out = new PrintWriter(new FileWriter("goodoutput.txt", true))){
 			out.print(pa.getName1() + "~" + pa.getName2() + "~" + pa.getName3() + "~" + pa.getCnp() + "~"
 					+ pa.getEmail() + "%");
-			out.close();
 		} catch (Exception e) {
 			System.out.println("Error when trying to write to file");
 		}

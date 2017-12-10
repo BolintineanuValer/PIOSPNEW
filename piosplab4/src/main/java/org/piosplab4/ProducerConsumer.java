@@ -8,8 +8,7 @@ public class ProducerConsumer {
 	private static BlockingQueue<Person> queuelistperson = new LinkedBlockingQueue<Person>();
 
 	public synchronized BlockingQueue<Person> produce() throws InterruptedException {
-		Person ab = new Person();
-		List<Person> listperson = ab.readfromfile();
+		List<Person> listperson = Person.readfromfile();
 		System.out.println("Before producing" + queuelistperson);
 		for (int i = 0; i < listperson.size(); i++) {
 			queuelistperson.put(listperson.get(i));
@@ -21,13 +20,12 @@ public class ProducerConsumer {
 	}
 
 	public synchronized void consume() throws InterruptedException {
-		Person a = new Person();
 		Person b = new Person();
 		System.out.println("Before consuming " + queuelistperson);
 		for (int j = 0; j < queuelistperson.size(); j++) {
 			b = queuelistperson.take();
 			System.out.println("Person " + b + " has been consumed from the queue");
-			a.writetofile(b);
+			Person.writetofile(b);
 			j--;
 		}
 		System.out.println("After consuming" + queuelistperson);

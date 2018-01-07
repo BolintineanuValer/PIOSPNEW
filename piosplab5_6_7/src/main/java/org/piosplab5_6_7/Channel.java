@@ -54,17 +54,19 @@ public class Channel implements Runnable {
 				socket.receive(packet);
 
 				String msg = new String(buffer, 0, packet.getLength());
-				if(msg.substring(msg.length()-4,msg.length()).equals("|@@|")) {
-					firstrun=false;
-					socket.close();
-					break;
-				}
 				if(msg.substring(msg.length()-4,msg.length()).equals("!bye")) {
 					System.out.println("Connection closed --- !bye");
 					firstrun=false;
 					socket.close();
 					break;
 				}
+				if(msg.substring(msg.length()-7,msg.length()).equals("!byebye")) {
+					System.out.println("Connection closed --- !byebye");
+					firstrun=false;
+					socket.close();
+					break;
+				}
+				
 				if (firstrun == true) {
 					if(msg.substring(msg.length()-4,msg.length()).equals("!ack")) {
 						System.out.println(msg);

@@ -16,9 +16,9 @@ public class Chat {
 		List<Integer> destinationPorts = new ArrayList<>();
 		List<String> destinationIPs = new ArrayList<>();
 		List<Channel> channelslist = new ArrayList<>();
-		///String sendexisting = "|@@|";
+		int msgnr=0;
 
-		System.out.print("Name : ");
+		System.out.print("Name: ");
 		String name = scanner.nextLine();
 		names.add(name);
 
@@ -53,9 +53,8 @@ public class Chat {
 
 		while (true) {
 			String msg = scanner.nextLine();
+			msgnr++;
 
-			if (msg.equals("!byebye"))
-				break;
 			if (msg.length() > 7) {
 
 				for (int i = 0; i < names.size(); i++) {
@@ -65,7 +64,7 @@ public class Chat {
 						for (int j = 0; j < channelslist.size(); j++) {
 							if (msg.substring(7, msg.length()).equals(channelslist.get(j).getName())) {
 								System.out.println(channelslist.get(j).getName() + "<- Channel close socket");
-								//channelslist.get(j).sendTo(address, sendexisting);
+								// channelslist.get(j).sendTo(address, sendexisting);
 								channelslist.get(j).getSocket().close();
 							}
 						}
@@ -91,9 +90,12 @@ public class Chat {
 						System.out.println("Started.");
 
 						address = new InetSocketAddress(/* destinationIP */"192.168.0.31", destinationPort);
+						
+						msgnr=1;
 
 					}
 				}
+
 				if ("!hello".equals(msg.substring(0, 6))) {
 					if (!names.contains(msg.substring(7, msg.length()))) {
 						/*
@@ -126,10 +128,13 @@ public class Chat {
 						System.out.println("Started.");
 
 						address = new InetSocketAddress(/* destinationIP1 */"192.168.0.31", destinationPort1);
+						
+						msgnr=1;
 					}
 				}
-				System.out.println(names);
+				//System.out.println(names);
 			}
+			System.out.println("Chat: "+names);
 			actualmessage = msg;
 
 			msg = name + " >> " + msg;
@@ -140,8 +145,29 @@ public class Chat {
 					System.out.println(msg);
 				}
 			} else {
+				if(!actualmessage.equals("!byebye")) {
 				channel.sendTo(address, msg);
 				System.out.println(msg);
+				}
+			}
+
+			if (actualmessage.equals("!bye")) {
+				System.out.println("Connection closed --- !bye");
+				channel.sendTo(address, msg);
+				channel.getSocket().close();
+			}
+			
+			if (actualmessage.equals("!byebye")) {
+				System.out.println("Connection closed --- !byebye");
+				channel.sendTo(address, msg);
+				break;
+			}
+			
+			if(!actualmessage.equals("!ack") && msgnr==2) {
+				System.out.println("Connection closed --- no !ack");
+				channel.sendTo(address, msg);
+				channel.getSocket().close();
+				
 			}
 		}
 
